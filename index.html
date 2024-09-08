@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Portfolio - Vaishnavi Samboji</title>
+
+    <!-- Link to CSS -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Google Fonts for Typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <!-- Link to EmailJs -->
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+    (function(){
+        emailjs.init({
+            publicKey: "Rrb2NXp6y-e9GxgUI",
+        });
+    })();
+    </script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>VAISHNAVI SAMBOJI</h1>
+            <button class="menu-toggle">Menu</button>
+            <nav class="nav-menu">
+                <ul class="dropdown">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="home" class="home-section">
+        <div class="home-content">
+            <h2>Welcome to My Portfolio</h2>
+            <p id="typing-p"></p>
+        </div>
+    </section>
+
+    <section id="about" class="about-section">
+        <div class="about-container">
+            <img src="vaishnavi.png" alt="Vaishnavi" class="profile-pic">
+            <div class="about-text">
+                <p>
+                    Hi! I'm Vaishnavi Samboji, a passionate data analytics student at San Jose State University with experience in tools like PowerBI, Tableau, AWS, Excel, Apache Hadoop, and many more. I completed my undergraduation in Electronics and Communication Engineering. I love using data to find meaningful insights and solve real-time problems.
+                </p>
+                <p>
+                    In addition to my love for data, I have a strong passion for web development. I enjoy building responsive, user-friendly websites using HTML, CSS, and JavaScript.
+                </p>
+            </div>
+        </div>
+    </section>
+    
+    <section id="projects" class="projects-section">
+        <h2>My Projects</h2>
+        <p>Check out some of the projects I have worked on.</p>
+        <div class="projects-grid">
+
+            <!-- Project 1 -->
+            <a href="https://github.com/vaishnavisamboji/US-Honey-Production-Data-Visualization" target="_blank" class="project">
+                <img src="Dataviz.png" alt="Project 1" class="project-image">
+                <div class="project-info">
+                    <h3 class="project-title">US Honey Production, Demand, and how to Maximize Sales</h3>
+                    <p class="project-description">Developed a Power BI dashboard on U.S. honey production (1995-2021) using USDA data. Key insights include rising prices, declining colony yields, and top producers like North Dakota. Introduced “Average Monetary Yield per Colony” to highlight Virginia’s potential. The project features three dashboards: trends, state insights, and analysis.</p>
+                </div>
+            </a>
+            
+            <!-- Project 2 -->
+            <a href="https://github.com/vaishnavisamboji/Night-Patrol-Robot" target="_blank" class="project">
+                <img src="NPR.png" alt="Project 2" class="project-image">
+                <div class="project-info">
+                    <h3 class="project-title">Night Patrol Robot</h3>
+                    <p class="project-description">I developed a night patrolling robot with an ESP32 camera for live video streaming and IoT connectivity. It autonomously patrols using IR sensors to detect human activity, avoid obstacles, and monitor sound. Controlled by an Arduino UNO and programmed in embedded C, the robot enhances security by detecting intrusions and reporting them to a central control unit.</p>
+                </div>
+            </a>
+        </div>
+    </section>
+    
+    <section id="skills" class="skills-section">
+        <h2>Skills</h2>
+        <div class="skills-container">
+            <!-- Python -->
+            <div class="skill">
+                <i class="fab fa-python"></i>
+                <h3>Python</h3>
+                <p>Expert in Python programming for data analysis and automation.</p>
+            </div>
+        
+            <!-- C -->
+            <div class="skill">
+                <i class="fas fa-code"></i>
+                <h3>C</h3>
+                <p>Proficient in C programming for system-level development.</p>
+            </div>
+        
+            <!-- HTML -->
+            <div class="skill">
+                <i class="fab fa-html5"></i>
+                <h3>HTML</h3>
+                <p>Proficient in creating structured and semantic HTML code.</p>
+            </div>
+        
+            <!-- CSS -->
+            <div class="skill">
+                <i class="fab fa-css3-alt"></i>
+                <h3>CSS</h3>
+                <p>Experienced in styling websites with modern CSS techniques.</p>
+            </div>
+
+            <!-- JavaScript -->
+            <div class="skill">
+                <i class="fab fa-js"></i>
+                <h3>JavaScript</h3>
+                <p>Skilled in creating dynamic and interactive web applications.</p>
+            </div>
+
+            <!-- MySQL -->
+            <div class="skill">
+                <i class="fas fa-database"></i>
+                <h3>MySQL</h3>
+                <p>Proficient in SQL for database management and querying.</p>
+            </div>
+
+            <!-- Tableau -->
+            <div class="skill">
+                <i class="fas fa-chart-pie"></i>
+                <h3>Tableau</h3>
+                <p>Skilled in creating interactive data dashboards with Tableau.</p>
+            </div>
+
+            <!-- Power BI -->
+            <div class="skill">
+                <i class="fas fa-chart-bar"></i>
+                <h3>Power BI</h3>
+                <p>Proficient in creating data reports and visualizations using Power BI.</p>
+            </div>
+
+            <!-- Excel -->
+            <div class="skill">
+                <i class="fas fa-file-excel"></i>
+                <h3>Excel</h3>
+                <p>Proficient in data analysis, reporting, and visualization using Excel.</p>
+            </div>
+      
+            <!-- AWS -->
+            <div class="skill">
+                <i class="fab fa-aws"></i>
+                <h3>AWS</h3>
+                <p>Experienced with cloud services and infrastructure using AWS.</p>
+            </div>
+        </div>
+    </section>
+    
+    <section id="contact" class="contact-section">
+        <h2>Contact Me</h2>
+        <p>Feel free to get in touch with me via email or LinkedIn.</p>
+
+        <!-- Contact Form -->
+        <form id="contactForm">
+            <div class="form-group">
+                <label for="subject">Subject</label>
+                <input type="text" id="subject" name="subject" placeholder="Enter subject" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="4" placeholder="Write your message here..." required></textarea>
+            </div>
+            <button type="submit" class="send-button">Send</button>
+        </form>
+    
+        <p id="resultMessage" style="display: none;">Sent!</p>    
+
+        <!-- Social Icons -->
+        <div class="social-icons">
+            <a href="https://github.com/vaishnavisamboji" target="_blank">
+                <i class="fab fa-github"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/vaishnavi-samboji/" target="_blank">
+                <i class="fab fa-linkedin"></i>
+            </a>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Vaishnavi Samboji. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript for interactivity -->
+    <script src="script.js"></script>
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                window.scrollTo({
+                    top: target.offsetTop,
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Scroll effect on home section text
+        window.addEventListener('scroll', function () {
+            const homeSection = document.querySelector('.home-content');
+            let scrollPosition = window.pageYOffset;
+            homeSection.style.transform = 'translateY(' + scrollPosition * 0.5 + 'px)';
+        });
+    </script>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const text = "I'm Vaishnavi Samboji, a passionate data analytics student and web developer.";
+            let charIndex = 0;
+
+            function type() {
+                document.getElementById('typing-p').innerHTML = text.substring(0, charIndex) + '<span class="cursor">|</span>';
+                charIndex++;
+                if (charIndex <= text.length) {
+                    setTimeout(type, 25);  // Faster typing speed (from 100ms to 50ms)
+                } else {
+                    document.querySelector('.cursor').style.display = 'none';
+                }
+            }
+            type();
+        });
+    </script> 
+
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                const offset = 100;
+
+                window.scrollTo({
+                    top: targetElement.offsetTop - offset,
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>
