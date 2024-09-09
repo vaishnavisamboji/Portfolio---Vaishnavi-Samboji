@@ -121,12 +121,13 @@ img, .content-section {
     .nav-menu ul {
         display: flex;
         flex-direction: row;
-        gap: 30px; /* Reduce gap between menu items */
+        gap: 40px; /* Adjust gap between menu items */
         background-color: transparent;
         padding: 0;
         border-radius: 0;
         position: static;
-        margin-left: auto; /* Ensure menu stays on the right */
+        margin-left: auto; /* Ensure the menu is aligned to the right */
+        margin-right: 10px; /* Add space between the right edge and the Contact button */
     }
 
     .nav-menu ul li {
@@ -135,19 +136,19 @@ img, .content-section {
 
     .nav-menu ul li a {
         color: #EAE1E1;
-        background-color: #5C3B39;
-        padding: 8px 15px; /* Adjust padding to make items smaller */
-        border-radius: 10px; 
+        background-color: #8A6565;
+        padding: 12px 20px; /* Adjust padding to make items smaller */
+        border-radius: 20px; 
         transition: background-color 0.3s ease;
     }
 
-    /* Remove space between items */
+    /* Small border for separation, and ensure no space between items */
     .nav-menu ul li a:not(:last-child) {
-        border-right: 1px solid #333; /* Small border for separation */
+        border-right: 1px solid #333;
     }
 
     .nav-menu ul li a:hover {
-        background-color: #8A6565;
+        background-color: #5C3B39;
         color: #fff;
     }
 
@@ -161,13 +162,30 @@ img, .content-section {
         text-decoration: none; /* This will remove the underline */
     }
 
-    /* Existing hover state for menu items */
+    /* Ensure no underline shows on hover */
     .nav-menu ul li a:hover {
-        text-decoration: none; /* Ensure underline doesn't show on hover */
+        text-decoration: none;
     }
 
-}
+    /* Container for the logo and menu */
+    .container {
+        display: flex;
+        justify-content: space-between; /* Space between the logo and menu */
+        align-items: center;
+        padding: 0 40px; /* Add padding to the sides for better spacing */
+    }
 
+    /* Adjust spacing for Vaishnavi Samboji */
+    header h1 {
+        margin-left: 20px; /* Add space between the logo and the left side */
+    }
+}
+/* Add this CSS for the active menu item */
+.nav-menu ul li a.active {
+    background-color: #5C3B39;
+    color: #ffffff; /* Text color */
+    transition: background-color 0.3s ease;
+}
 
 
 /* For screens below 768px */

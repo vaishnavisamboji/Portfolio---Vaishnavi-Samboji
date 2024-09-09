@@ -4,19 +4,6 @@ window.addEventListener('scroll', function () {
     header.classList.toggle('scrolled', window.scrollY > 100);
 });
 
-// Smooth scroll for navigation
-document.querySelectorAll('nav a').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        window.scrollTo({
-            top: target.offsetTop,
-            behavior: 'smooth'
-        });
-    });
-});
-
-
 document.addEventListener('DOMContentLoaded', () => {
     const menuToggle = document.querySelector('.menu-toggle');
     const navMenu = document.querySelector('.nav-menu ul');
@@ -34,9 +21,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
-
-
-
 
 // Scroll effect for text
 window.addEventListener('scroll', function () {

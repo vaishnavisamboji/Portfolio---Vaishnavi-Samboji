@@ -259,5 +259,34 @@
         });
     </script>
     <script src="script.js"></script>
+    
+    <script>
+    // JavaScript to highlight the current section's menu item
+document.addEventListener('DOMContentLoaded', function () {
+    const sections = document.querySelectorAll('section'); // Select all sections
+    const navLinks = document.querySelectorAll('.nav-menu ul li a'); // Select all nav links
+
+    window.addEventListener('scroll', () => {
+        let current = '';
+
+        // Loop through each section to determine which one is in the viewport
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.clientHeight;
+            if (window.scrollY >= sectionTop - sectionHeight / 3) {
+                current = section.getAttribute('id');
+            }
+        });
+
+        // Loop through nav links and toggle the 'active' class based on the current section
+        navLinks.forEach(link => {
+            link.classList.remove('active');
+            if (link.getAttribute('href').includes(current)) {
+                link.classList.add('active');
+            }
+        });
+    });
+});
+</script>
 </body>
 </html>
