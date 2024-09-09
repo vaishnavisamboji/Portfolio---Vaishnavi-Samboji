@@ -16,10 +16,26 @@ document.querySelectorAll('nav a').forEach(anchor => {
     });
 });
 
-// Toggle the dropdown menu
-document.querySelector('.menu-toggle').addEventListener('click', function () {
-    document.querySelector('.nav-menu ul').classList.toggle('active');
+
+document.addEventListener('DOMContentLoaded', () => {
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navMenu = document.querySelector('.nav-menu ul');
+    const menuLinks = document.querySelectorAll('.nav-menu ul li a');
+
+    // Toggle the menu visibility when clicking the menu button
+    menuToggle.addEventListener('click', function() {
+        navMenu.classList.toggle('active');
+    });
+
+    // Close the menu when a link is clicked
+    menuLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            navMenu.classList.remove('active');
+        });
+    });
 });
+
+
 
 
 // Scroll effect for text
@@ -41,20 +57,23 @@ document.getElementById("contactForm").addEventListener("submit", function(event
     event.preventDefault(); // Prevent the default form submission behavior
 
     // Collect form data
+    const fromEmail = document.getElementById("fromEmail").value;
     const subject = document.getElementById("subject").value;
     const message = document.getElementById("message").value;
 
+    console.log("From Email:", fromEmail);
     console.log("Subject:", subject);
     console.log("Message:", message);
 
     // Check if subject and message are not empty
-    if (!subject || !message) {
+    if (!fromEmail || !subject || !message) {
         alert("Please fill in both the subject and message fields.");
         return;
     }
 
     // Send email using EmailJS
     emailjs.send("service_ozvf65v", "template_3beo9ar", {
+        from_email: fromEmail,
         subject: subject,
         message: message,
     })

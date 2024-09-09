@@ -29,7 +29,7 @@
     <header>
         <div class="container">
             <h1>VAISHNAVI SAMBOJI</h1>
-            <button class="menu-toggle">Menu</button>
+            <button class="menu-toggle" onclick="toggleMenu()">☰</button>
             <nav class="nav-menu">
                 <ul class="dropdown">
                     <li><a href="#home">Home</a></li>
@@ -169,6 +169,10 @@
 
         <!-- Contact Form -->
         <form id="contactForm">
+            <div>
+                <label for="fromEmail">From (Your Email):</label>
+                <input type="email" id="fromEmail" placeholder="Enter your email" required>
+            </div>
             <div class="form-group">
                 <label for="subject">Subject</label>
                 <input type="text" id="subject" name="subject" placeholder="Enter subject" required>
@@ -254,6 +258,6 @@
             });
         });
     </script>
-
+    <script src="script.js"></script>
 </body>
 </html>

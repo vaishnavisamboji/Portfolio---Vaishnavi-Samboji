@@ -7,7 +7,50 @@ body {
     scroll-behavior: smooth;
     background-color: #EAE1E1;
     color: #5C3B39;
+    width: 100%;
+    overflow-x: hidden;
 }
+
+
+/* Ensure the body and HTML elements take up full height */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    background-color: #EAE1E1;
+    width: 100%;
+    color: #5C3B39;
+}
+
+/* Style adjustments for all sections */
+.home-section,
+.about-section,
+.projects-section,
+.skills-section,
+.contact-section {
+    width: 100%; /* Ensure each section occupies full width */
+    box-sizing: border-box; /* Include padding and border in the width */
+    padding: 20px; /* Add padding as needed */
+    margin: 0; /* Ensure there's no unexpected margin */
+}
+
+/* For smaller screens (mobile and tablet) */
+@media (max-width: 768px) {
+    .home-section,
+    .about-section,
+    .projects-section,
+    .skills-section,
+    .contact-section {
+        padding: 10px; /* Adjust padding for smaller screens */
+    }
+}
+/* Add a temporary background color to visualize sections */
+.home-section { background-color: #f9f3f3; }
+.about-section { background-color: #f3e8e8; }
+.projects-section { background-color: #eadcdc; }
+.skills-section { background-color: #e4d2d2; }
+.contact-section { background-color: #dcc7c7; }
 
 /* Headings and Typography */
 h1, h2 {
@@ -40,89 +83,198 @@ header {
     padding: 15px 0;
     position: fixed;
     width: 100%;
+    top: 0;
     z-index: 10;
 }
 
+/* Container */
 .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 20px;
-}
-
-/* Menu Button */
-.menu-toggle {
-    background-color: #8A6565;
-    color: #EAE1E1;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 25px;
-    cursor: pointer;
-    font-size: 1rem;
-}
-
-.menu-toggle:hover {
-    background-color: #5C3B39;
-}
-
-/* Dropdown Menu */
-.nav-menu ul {
-    list-style: none;
     padding: 0;
-    margin: 0;
-    position: absolute;
-    top: 60px;
-    right: 20px;
-    background-color: #D9CFCF;
-    border-radius: 5px;
-    display: none;
-    flex-direction: column;
-    gap: 10px;
-    padding: 20px;
+    width: 100%;
+    margin: 0 auto;
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
-.nav-menu ul li {
-    text-align: center;
+section {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
 }
-
-.nav-menu ul li a {
-    padding: 10px 20px;
-    background-color: #8A6565;
-    border-radius: 25px;
-    color: #EAE1E1;
-    text-decoration: none;
-    font-weight: 500;
-    transition: background-color 0.3s ease;
+* {
+    box-sizing: border-box;
 }
-
-.nav-menu ul li a:hover {
-    background-color: #5C3B39;
+img, .content-section {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
 }
-
-/* When menu is active */
-.nav-menu ul.active {
-    display: flex;
-}
-
-/* Dropdown Menu Visibility on Larger Screens */
-@media (min-width: 768px) {
+/* Desktop Menu Styles */
+@media (min-width: 769px) {
     .menu-toggle {
-        display: none;
+        display: none; /* Hide the menu toggle on larger screens */
     }
 
     .nav-menu ul {
         display: flex;
-        position: static;
         flex-direction: row;
+        gap: 30px; /* Reduce gap between menu items */
         background-color: transparent;
         padding: 0;
-        width: auto;
+        border-radius: 0;
+        position: static;
+        margin-left: auto; /* Ensure menu stays on the right */
     }
 
     .nav-menu ul li {
-        margin: 0 20px;
+        margin: 0;
+    }
+
+    .nav-menu ul li a {
+        color: #EAE1E1;
+        background-color: #5C3B39;
+        padding: 8px 15px; /* Adjust padding to make items smaller */
+        border-radius: 10px; 
+        transition: background-color 0.3s ease;
+    }
+
+    /* Remove space between items */
+    .nav-menu ul li a:not(:last-child) {
+        border-right: 1px solid #333; /* Small border for separation */
+    }
+
+    .nav-menu ul li a:hover {
+        background-color: #8A6565;
+        color: #fff;
+    }
+
+    /* Remove bullets from menu items */
+    .nav-menu ul {
+        list-style: none; /* This will remove the bullet points */
+    }
+
+    /* Remove underline from menu items */
+    .nav-menu ul li a {
+        text-decoration: none; /* This will remove the underline */
+    }
+
+    /* Existing hover state for menu items */
+    .nav-menu ul li a:hover {
+        text-decoration: none; /* Ensure underline doesn't show on hover */
+    }
+
+}
+
+
+
+/* For screens below 768px */
+@media (max-width: 768px) {
+
+    /* Container and Header Adjustments */
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 20px;
+        width: 100%;
+    }
+
+    /* Style for the hamburger menu (Menu Toggle) */
+    .menu-toggle {
+        background-color: #8A6565;
+        color: #EAE1E1;
+        padding: 8px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 24px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 100;
+        width: 45px;
+        height: 42px;
+        position: fixed;
+        top: 30px;
+        right: 55px; /* Moved 5px to the left */
+    }
+
+    .menu-toggle span {
+        background-color: #EAE1E1;
+        height: 3px;
+        width: 100%;
+        display: block;
+        border-radius: 2px;
+    }
+
+    /* Dropdown Menu styling */
+    .nav-menu ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        background-color: #D9CFCF;
+        border-radius: 8px;
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        right: 10px; /* Align with the new menu toggle */
+        top: 70px;
+        width: 150px;
+        z-index: 9999;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-menu ul li {
+        text-align: left;
+    }
+
+    .nav-menu ul li a {
+        padding: 10px 20px;
+        font-size: 16px;
+        color: #5C3B39;
+        background-color: #EAE1E1;
+        text-decoration: none;
+        border-radius: 0;
+        display: block;
+        width: 100%;
+        border-bottom: 1px solid #D9CFCF;
+        transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    .nav-menu ul li a:hover {
+        background-color: #5C3B39;
+        color: #fff;
+    }
+
+    .nav-menu ul.active {
+        display: flex;
+    }
+
+    h1 {
+        font-size: 2rem;
+        text-align: left;
+        margin: 0;
+        padding-left: 10px;
+    }
+
+    header + section {
+        margin-top: 100px;
+    }
+
+    body {
+        overflow-x: hidden;
     }
 }
+
+
+
+
+
+
+
 
 /* Home Section without background image */
 .home-section {
@@ -135,6 +287,9 @@ header {
     text-align: center;
     position: relative;
     overflow: hidden;
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
 }
 
 .home-section h2, .home-section p {
@@ -235,6 +390,44 @@ header {
     justify-content: space-between;
 }
 
+/* Project Section Adjustments for Mobile and Tablet */
+@media (max-width: 768px) {
+
+    /* Ensure project cards take full width and are centered */
+    .projects-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 0 15px; /* Add some padding to prevent content sticking to the edges */
+    }
+
+    /* Adjust project card width for smaller screens */
+    .project {
+        width: 100%; /* Take full width on smaller screens */
+        max-width: 100%; /* Ensure it doesn't overflow */
+        margin-bottom: 0px; /* Add some spacing between project cards */
+    }
+
+    /* Adjusting images inside project cards */
+    .project img {
+        width: 100%; /* Ensure image takes full width of the project card */
+        height: 100%;
+    }
+
+    /* Project title and description adjustments */
+    .project-title, .project-description {
+        text-align: center; /* Ensure text is centered */
+    }
+}
+
+/* For even smaller screens */
+@media (max-width: 480px) {
+    .project {
+        padding: 10px; /* Adjust padding for very small screens */
+    }
+}
+
 .project-info {
     padding: 15px;
 }
@@ -332,6 +525,43 @@ form {
     flex-direction: column;
     align-items: center;
 }
+/* Style for the email input (From) */
+#contactForm div {
+    margin-bottom: 15px;
+}
+
+#contactForm label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 1rem;
+    color: #fff;
+}
+
+#contactForm input,
+#contactForm textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    font-size: 1rem;
+    color: #5C3B39;
+}
+
+#contactForm button {
+    padding: 10px 20px;
+    background-color: #8A6565;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+#contactForm button:hover {
+    background-color: #5C3B39;
+}
+
 
 input[type="text"], textarea {
     width: 90%;
